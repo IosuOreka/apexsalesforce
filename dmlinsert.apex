@@ -1,0 +1,30 @@
+Account newAccount = new Account(
+    Name = 'Global Tech Innovations',
+    Site = 'Main Office',
+    AccountSource = 'Web',
+    Active__c = 'Active',
+    AnnualRevenue = 50000000.00,
+    CustomerPriority__c = 'High',
+    DunsNumber = '012345678',
+    Jigsaw = 'ABC123456',
+    Description = 'A leading technology company specializing in innovative solutions.',
+    NumberOfEmployees = 500,
+    Fax = '555-123-4567',
+    Industry = 'Technology',
+    NaicsCode = '541512',
+    NaicsDesc = 'Computer Systems Design Services',
+    NumberofLocations__c = 10,
+    Ownership = 'Public',
+    Phone = '555-987-6543',
+    Sic = '1234',
+    SicDesc = 'Software Development',
+    SLA__c = 'Gold',
+    SLAExpirationDate__c = Date.today().addYears(1),
+    SLASerialNumber__c = 'SLA123456',
+    TickerSymbol = 'GTI',
+    Tradestyle = 'GlobalTech',
+    Type = 'Prospect',
+    UpsellOpportunity__c = 'High'
+);
+
+insert newAccount;
