@@ -15,9 +15,16 @@
    - **Ejercicio 10**:  Declara una variable de tipo decimal llamada precio y asígnale el valor 99.99.
 
 2. **Operaciones Básicas con Variables**
-   - **Ejercicio 5**: Declara dos variables enteras llamadas `numero1` y `numero2` con valores `5` y `3`, respectivamente. Declara una tercera variable entera llamada `resultado` y asígnale el resultado de la suma de `numero1` y `numero2`.
-   - **Ejercicio 6**: Declara una variable de tipo cadena llamada `saludo` con el valor `"Hola"`. Luego, declara otra variable de tipo cadena llamada `nombre` con el valor `"Mundo"`. Declara una tercera variable llamada `mensajeCompleto` y asígnale la concatenación de `saludo` y `nombre`.
-   - **Ejercicio 7**: Declara una variable booleana llamada `esMayor` y asígnale el resultado de comparar si `numero1` es mayor que `numero2` (usando las variables del ejercicio 5).
+   - **Ejercicio 11**: Declara dos variables enteras llamadas a y b con valores 15 y 5, respectivamente. Declara una tercera variable entera llamada suma y asígnale el resultado de la suma de a y b.
+   - **Ejercicio 12**: Declara dos variables decimales llamadas x y y con valores 12.5 y 3.75, respectivamente. Declara una tercera variable decimal llamada multiplicacion y asígnale el resultado de la multiplicación de x y y.
+   - **Ejercicio 13**:  Declara una variable de tipo cadena llamada saludo con el valor "Hola". Luego, declara otra variable de tipo cadena llamada nombre con el valor "Carlos". Declara una tercera variable llamada mensaje y asígnale la concatenación de saludo y nombre.
+   - **Ejercicio 14**: Declara una variable entera llamada resultado y asígnale el resultado de la división de a entre b (usando las variables del ejercicio 11).
+   - **Ejercicio 15**: Declara una variable booleana llamada esIgual y asígnale el resultado de comparar si a es igual a b.
+   - **Ejercicio 16**: Declara una variable entera llamada resta y asígnale el resultado de restar b de a (usando las variables del ejercicio 11).
+   - **Ejercicio 17**: Declara una variable de tipo cadena llamada descripcion y asígnale el valor "Producto". Luego, concatena descripcion con el valor de precio (del ejercicio 10) y asígnale el resultado a una nueva variable llamada detalle.
+   - **Ejercicio 18**: Declara una variable decimal llamada promedio y asígnale el resultado de dividir la suma de x y y (del ejercicio 12) entre 2.
+   - **Ejercicio 19**: Declara una variable booleana llamada esMayorQue y asígnale el resultado de verificar si x es mayor que y (del ejercicio 12).
+   - **Ejercicio 20**: Declara una variable de tipo cadena llamada estado y asígnale el valor "Activo". Luego, verifica si estado es igual a "Activo" y almacena el resultado en una variable booleana llamada esActivo.
 
 3. **Conversiones de Tipos**
    - **Ejercicio 8**: Declara una variable de tipo `String` llamada `numeroComoCadena` con el valor `"25"`. Luego, convierte ese valor a un entero y almacénalo en una variable llamada `numeroConvertido`.
