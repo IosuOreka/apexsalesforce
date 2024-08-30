@@ -27,8 +27,15 @@
    - **Ejercicio 20**: Declara una variable de tipo cadena llamada estado y asígnale el valor "Activo". Luego, verifica si estado es igual a "Activo" y almacena el resultado en una variable booleana llamada esActivo.
 
 3. **Conversiones de Tipos**
-   - **Ejercicio 8**: Declara una variable de tipo `String` llamada `numeroComoCadena` con el valor `"25"`. Luego, convierte ese valor a un entero y almacénalo en una variable llamada `numeroConvertido`.
-   - **Ejercicio 9**: Declara una variable de tipo `Decimal` llamada `miDecimal2` con el valor `10.5`. Convierte este valor a un entero y almacénalo en una variable llamada `enteroConvertido`.
+   - **Ejercicio 21**: Declara una variable de tipo String llamada edadComoTexto con el valor "30". Luego, convierte ese valor a un entero y almacénalo en una variable llamada edadNumerica.`numeroConvertido`.
+   - **Ejercicio 22**: Declara una variable de tipo Decimal llamada precioDecimal con el valor 50.99. Convierte este valor a un entero y almacénalo en una variable llamada precioEntero.
+   - **Ejercicio 23**: Declara una variable de tipo Integer llamada cantidad con el valor 100. Convierte este valor a una cadena y almacénalo en una variable llamada cantidadTexto.
+   - **Ejercicio 24**: Declara una variable de tipo String llamada textoDecimal con el valor "123.45". Convierte este valor a un Decimal y almacénalo en una variable llamada valorDecimal.
+   - **Ejercicio 25**: Declara una variable de tipo Boolean llamada esCierto con el valor true. Convierte este valor a una cadena y almacénalo en una variable llamada textoBooleano.
+   - **Ejercicio 26**: Declara una variable de tipo String llamada fechaTexto con el valor "2023-08-15". Convierte este valor a un Date y almacénalo en una variable llamada fechaConvertida.
+   - **Ejercicio 27**: Declara una variable de tipo Datetime llamada fechaHoraActual con el valor Datetime.now(). Convierte este valor a una cadena y almacénalo en una variable llamada fechaHoraTexto.
+   - **Ejercicio 28**: Declara una variable de tipo String llamada nombreCompleto con el valor "Juan Pérez". Extrae el primer nombre (usando substring) y almacénalo en una variable llamada primerNombre.
+   - **Ejercicio 29**: Declara una variable de tipo Decimal llamada factor con el valor 2.5. Convierte este valor a un Double y almacénalo en una variable llamada valorDoble.
 
 ### **Ejercicios sobre Colecciones**
 
