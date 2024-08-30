@@ -25,3 +25,8 @@ trigger ClosedOpportunityTrigger on Opportunity (after insert, after update) {
         insert tasksToCreate;
     }
 }
+
+
+rutaIosu --> modulo z --> parte 1.2
+
+rutaCertiIosu --> Day1 .. modulo x
