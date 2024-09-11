@@ -2,5 +2,14 @@
 
 List<Double> calificaciones = new List<Double> {8.5, 9.0, 7.5};
 
-Double suma;
-Integer asignatura;
+Double suma = 0;
+Integer asignatura = 0;
+
+for(Double cal : calificaciones){
+    suma += cal;
+    asignatura += 1;
+}
+
+Decimal notaMedia = suma/asignatura;
+
+System.debug('La nota media del curso es ' + notaMedia);

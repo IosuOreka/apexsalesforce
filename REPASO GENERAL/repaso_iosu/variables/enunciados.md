@@ -48,6 +48,15 @@ p
    - **Ejercicio 34**: Declara una lista de Integer llamada edades e inicialízala con los valores 25, 30, y 35. Usa un bucle for para imprimir cada edad en la consola.
    - **Ejercicio 35**: Declara una lista de Account llamada cuentas. Luego, crea y añade tres cuentas con nombres "Cuenta1", "Cuenta2", y "Cuenta3" a esta lista. Imprime el nombre de cada cuenta en la consola.
    - **Ejercicio 36**: Declara una lista de Double llamada calificaciones e inicialízala con los valores 8.5, 9.0, y 7.5. Calcula y muestra el promedio de las calificaciones en la consola.
+   - **Ejercicio 37**:  Declara una lista de String llamada nombres e inicialízala con los valores "Ana", "Carlos", "Luis" y "Sofía". Luego, agrega un nuevo nombre "María" a la lista e imprime todos los nombres en la consola, uno por línea.
+   - **Ejercicio 38**: Declara una lista de Integer llamada edades y añádele las edades 25, 30, 22, 19, y 40. Calcula y muestra en la consola la edad mayor y menor en la lista.
+   - **Ejercicio 39**: Declara una lista de Boolean llamada respuestas con los valores true, false, true, true, y false. Luego, recorre la lista y cuenta cuántas respuestas son true y cuántas son false. Imprime ambos conteos en la consola.
+   - **Ejercicio 40**: Declara una lista de String llamada colores y añádele los valores "rojo", "verde", "azul" y "amarillo". Luego, elimina el color "verde" de la lista e imprime la lista actualizada en la consola.
+   - **Ejercicio 41**: Declara una lista de Integer llamada numeros con los valores 10, 20, 30, 40 y 50. Suma todos los números de la lista y muestra el resultado en la consola.
+   - **Ejercicio 42**: Declara una lista de Double llamada precios con los valores 15.99, 23.50, 9.99, y 18.75. Luego, añade un nuevo precio 12.30 a la lista, y calcula el total sumando todos los precios. Imprime el total en la consola.
+   - **Ejercicio 43**:  Declara una lista de String llamada frutas e inicialízala con los valores "manzana", "pera", "uva", "plátano" y "mango". Reemplaza el valor "plátano" por "kiwi" e imprime la lista actualizada en la consola.
+   - **Ejercicio 44**: Declara una lista de Character llamada letras con los valores 'a', 'e', 'i', 'o', 'u'. Luego, recorre la lista e imprime cada letra en mayúscula en la consola.
+   - **Ejercicio 45**: Declara una lista de Integer llamada temperaturas con los valores 22, 25, 27, 23, y 20. Calcula y muestra en la consola la temperatura promedio
 
 
 2. **Sets (Conjuntos)**
