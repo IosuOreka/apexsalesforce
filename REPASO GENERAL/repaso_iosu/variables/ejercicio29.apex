@@ -1,7 +1,4 @@
-public class ejercicio29 {
-    public static void solucion() {
-        Decimal factor = 2.5;
-        Double valorDoble = Double.valueOf(factor);
-        System.debug(valorDoble);
-    }
-}
+// Declara una lista de enteros llamada `misNumeros` y añádele los valores `1`, `2`, y `3`.
+
+List<Integer> misNumeros = new List<Integer>{1, 2, 3};
+System.debug(misNumeros);
