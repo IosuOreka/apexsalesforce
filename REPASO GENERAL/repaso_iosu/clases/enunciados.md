@@ -14,18 +14,18 @@
 
 ### Ejercicios Intermedios
 
-4. **Clase y Método para Gestión de Inventario:**
+5. **Clase y Método para Gestión de Inventario:**
    - **Enunciado:** Crea una clase Apex llamada `InventoryItem` con propiedades para `ItemName`, `Quantity`, y `Price`. Agrega un método `getTotalValue` que devuelva el valor total del inventario para ese artículo (cantidad * precio).
 
-5. **Propiedades y Método de Validación:**
+6. **Propiedades y Método de Validación:**
    - **Enunciado:** Desarrolla una clase `User` con propiedades para `Username` y `Email`. Crea un método `isEmailValid` que verifique si la dirección de correo electrónico tiene un formato válido (puedes usar una expresión regular simple para esto).
 
-6. **Clase con Métodos para Manipulación de Fechas:**
+7. **Clase con Métodos para Manipulación de Fechas:**
    - **Enunciado:** Implementa una clase `DateHelper` con un método `getDaysBetween` que acepte dos fechas y devuelva el número de días entre ellas.
 
 ### Ejercicios Avanzados
 
-7. **Clase con Cálculo de Bonificación:**
+8. **Clase con Cálculo de Bonificación:**
    - **Enunciado:** Crea una clase `Employee` con propiedades para `Name`, `Salary`, y `BonusRate`. Agrega un método `calculateBonus` que calcule la bonificación del empleado basada en su salario y la tasa de bonificación.
 
 8. **Clase para Gestión de Contactos:**
