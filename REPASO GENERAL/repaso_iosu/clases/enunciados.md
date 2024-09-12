@@ -9,6 +9,9 @@
 3. **Clase con Método de Conversión de Moneda:**
    - **Enunciado:** Implementa una clase `CurrencyConverter` con un método `convertToUSD` que acepte una cantidad en una moneda extranjera y un tipo de cambio, y devuelva el equivalente en dólares estadounidenses.
 
+4. **Clase con Propiedades de Rectángulo y Método para Calcular Área:**
+   - **Enunciado:** Implementa una clase Rectangle con propiedades length y width. Agrega un método calculateArea que devuelva el área del rectángulos.
+
 ### Ejercicios Intermedios
 
 4. **Clase y Método para Gestión de Inventario:**
