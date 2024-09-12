@@ -1,0 +1,1 @@
+- **Ejercicio 6**: Ejercicio 6: Declara una variable de tipo fecha y hora llamada miFechaHora y asígnale la fecha y hora actual (Datetime.now()).

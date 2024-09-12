@@ -1,0 +1,1 @@
+- **Ejercicio 8**: Declara una variable de tipo cadena llamada nombre y asígnale el valor "Ana".

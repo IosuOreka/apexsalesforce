@@ -1,0 +1,1 @@
+- **Ejercicio 5**: Ejercicio 5: Declara una variable de tipo fecha llamada miFecha y asígnale la fecha de hoy (Date.today()).
