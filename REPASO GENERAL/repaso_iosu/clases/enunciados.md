@@ -28,7 +28,7 @@
 8. **Clase con Cálculo de Bonificación:**
    - **Enunciado:** Crea una clase `Employee` con propiedades para `Name`, `Salary`, y `BonusRate`. Agrega un método `calculateBonus` que calcule la bonificación del empleado basada en su salario y la tasa de bonificación.
 
-8. **Clase para Gestión de Contactos:**
+9. **Clase para Gestión de Contactos:**
    - **Enunciado:** Desarrolla una clase `ContactManager` con un método `addContact` que acepte un nombre y un número de teléfono, y los guarde en una lista interna. Implementa otro método `getContactList` que devuelva la lista de contactos.
 
 9. **Clase con Métodos de Conversión de Unidades:**
