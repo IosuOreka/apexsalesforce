@@ -31,7 +31,7 @@
 9. **Clase para Gestión de Contactos:**
    - **Enunciado:** Desarrolla una clase `ContactManager` con un método `addContact` que acepte un nombre y un número de teléfono, y los guarde en una lista interna. Implementa otro método `getContactList` que devuelva la lista de contactos.
 
-9. **Clase con Métodos de Conversión de Unidades:**
+10. **Clase con Métodos de Conversión de Unidades:**
    - **Enunciado:** Implementa una clase `UnitConverter` con métodos para convertir entre diferentes unidades de medida, como metros a kilómetros, gramos a kilogramos, y litros a mililitros.
 
 10. **Clase para Gestión de Cuentas de Usuario:**
