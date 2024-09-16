@@ -75,7 +75,7 @@ p
 3. **Maps (Diccionarios)**
    - **Ejercicio 57**: Declara un `Map` que asocie enteros con cadenas llamado `miMapa`. Añádele los pares clave-valor `(1, "Uno")`, `(2, "Dos")`, y `(3, "Tres")`.
    - **Ejercicio 58**: Declara un `Map` que asocie cadenas con enteros llamado `mapaAlumnos` e inicialízalo con los valores `("Ana", 20)`, `("Luis", 22)`, `("Sofía", 19)`.
-   - **Ejercicio 59**: Añade un nuevo par clave-valor `(4, "Cuatro")` al `miMapa` (declarado en el ejercicio 17).
+   - **Ejercicio 59**: Añade un nuevo par clave-valor `(4, "Cuatro")` al `miMapa` (declarado en el ejercicio 57).
    - **Ejercicio 60**: Actualiza el valor asociado con la clave `2` en el `miMapa` para que sea `"Dos Actualizado"`.
    - **Ejercicio 61**: Obtén el valor asociado a la clave `"Ana"` en `mapaAlumnos` (del ejercicio 58) y guárdalo en una variable.
    Ejercicio 22: Declara un Map llamado mapaPrecios que asocie cadenas con decimales e inicialízalo con los valores ("Manzana", 0.75), ("Banana", 0.50), ("Naranja", 1.00).
