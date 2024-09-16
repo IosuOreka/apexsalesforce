@@ -73,11 +73,20 @@ p
    - **Ejercicio 56**: Encuentra la diferencia entre dos conjuntos (elementos que están en el primer conjunto pero no en el segundo).
 
 3. **Maps (Diccionarios)**
-   - **Ejercicio 17**: Declara un `Map` que asocie enteros con cadenas llamado `miMapa`. Añádele los pares clave-valor `(1, "Uno")`, `(2, "Dos")`, y `(3, "Tres")`.
-   - **Ejercicio 18**: Declara un `Map` que asocie cadenas con enteros llamado `mapaAlumnos` e inicialízalo con los valores `("Ana", 20)`, `("Luis", 22)`, `("Sofía", 19)`.
-   - **Ejercicio 19**: Añade un nuevo par clave-valor `(4, "Cuatro")` al `miMapa` (declarado en el ejercicio 17).
-   - **Ejercicio 20**: Actualiza el valor asociado con la clave `2` en el `miMapa` para que sea `"Dos Actualizado"`.
-   - **Ejercicio 21**: Obtén el valor asociado a la clave `"Ana"` en `mapaAlumnos` (del ejercicio 18) y guárdalo en una variable.
+   - **Ejercicio 57**: Declara un `Map` que asocie enteros con cadenas llamado `miMapa`. Añádele los pares clave-valor `(1, "Uno")`, `(2, "Dos")`, y `(3, "Tres")`.
+   - **Ejercicio 58**: Declara un `Map` que asocie cadenas con enteros llamado `mapaAlumnos` e inicialízalo con los valores `("Ana", 20)`, `("Luis", 22)`, `("Sofía", 19)`.
+   - **Ejercicio 59**: Añade un nuevo par clave-valor `(4, "Cuatro")` al `miMapa` (declarado en el ejercicio 17).
+   - **Ejercicio 60**: Actualiza el valor asociado con la clave `2` en el `miMapa` para que sea `"Dos Actualizado"`.
+   - **Ejercicio 61**: Obtén el valor asociado a la clave `"Ana"` en `mapaAlumnos` (del ejercicio 58) y guárdalo en una variable.
+   Ejercicio 22: Declara un Map llamado mapaPrecios que asocie cadenas con decimales e inicialízalo con los valores ("Manzana", 0.75), ("Banana", 0.50), ("Naranja", 1.00).
+   - **Ejercicio 62**: Declara un Map llamado mapaPrecios que asocie cadenas con decimales e inicialízalo con los valores ("Manzana", 0.75), ("Banana", 0.50), ("Naranja", 1.00).
+   - **Ejercicio 63**: Añade un nuevo par clave-valor ("Pera", 1.20) al mapaPrecios (del ejercicio 62).
+   - **Ejercicio 64**: Verifica si la clave "Naranja" está presente en el mapaPrecios. Si está, imprime su precio.
+   - **Ejercicio 65**: Elimina la clave "Banana" del mapaPrecios.
+   - **Ejercicio 66**: Recorre el miMapa (del ejercicio 57) e imprime todas las claves y sus respectivos valores.
+   - **Ejercicio 67**: Declara un Map que asocie enteros con enteros llamado tablaMultiplicar, y llena el mapa con los valores de la tabla de multiplicar del 5 (es decir, los pares (1, 5), (2, 10), (3, 15), ..., (10, 50)).
+   - **Ejercicio 68**: Comprueba si el valor 22 está presente en mapaAlumnos (del ejercicio 58) y muestra el resultado.
+   - **Ejercicio 69**: Crea un método llamado sumarValoresMapa que acepte un Map<String, Integer> como parámetro y devuelva la suma de todos los valores en el mapa.
 
 4. **Iteración sobre Colecciones**
    - **Ejercicio 22**: Itera sobre la lista `misNumeros` (del ejercicio 10) y muestra cada número en la consola.
