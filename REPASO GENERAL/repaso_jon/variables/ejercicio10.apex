@@ -1,0 +1,1 @@
+- **Ejercicio 10**:  Declara una variable de tipo decimal llamada precio y asígnale el valor 99.99.

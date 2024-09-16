@@ -1,0 +1,1 @@
+- **Ejercicio 7**: Declara una variable de tipo entero llamada edad y asígnale el valor 25.

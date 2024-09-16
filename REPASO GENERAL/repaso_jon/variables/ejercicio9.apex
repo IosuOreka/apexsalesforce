@@ -1,0 +1,1 @@
+- **Ejercicio 9**:  Declara una variable de tipo booleano llamada esAdmin y asígnale el valor false.
