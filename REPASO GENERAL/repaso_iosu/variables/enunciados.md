@@ -60,9 +60,17 @@ p
 
 
 2. **Sets (Conjuntos)**
-   - **Ejercicio 14**: Declara un conjunto de enteros llamado `miConjunto` y añádele los valores `1`, `2`, `3`.
-   - **Ejercicio 15**: Añade el valor `3` a `miConjunto` (declarado en el ejercicio 14). Observa qué sucede (recuerda que los sets no permiten elementos duplicados).
-   - **Ejercicio 16**: Elimina el valor `2` de `miConjunto`.
+   - **Ejercicio 46**: Declara un conjunto de enteros llamado `miConjunto` y añádele los valores `1`, `2`, `3`.
+   - **Ejercicio 47**: Añade el valor `3` a `miConjunto` (declarado en el ejercicio 14). Observa qué sucede (recuerda que los sets no permiten elementos duplicados).
+   - **Ejercicio 48**: Elimina el valor `2` de `miConjunto`.
+   - **Ejercicio 49**: Verifica si el valor 1 está presente en miConjunto.
+   - **Ejercicio 50**: Crea un conjunto de cadenas (String) llamado conjuntoCadenas con los valores "rojo", "azul", "verde", e intenta agregar "rojo" nuevamente..
+   - **Ejercicio 51**: Convierte un List de enteros a un Set para eliminar duplicados.
+   - **Ejercicio 52**: Une dos conjuntos Set de enteros.
+   - **Ejercicio 53**: Encuentra la intersección de dos conjuntos de enteros.
+   - **Ejercicio 54**: Borra todos los elementos de un conjunto.
+   - **Ejercicio 55**:  Convierte un Set de enteros a un List, ordena la lista y luego conviértela de nuevo a un Set.
+   - **Ejercicio 56**: Encuentra la diferencia entre dos conjuntos (elementos que están en el primer conjunto pero no en el segundo).
 
 3. **Maps (Diccionarios)**
    - **Ejercicio 17**: Declara un `Map` que asocie enteros con cadenas llamado `miMapa`. Añádele los pares clave-valor `(1, "Uno")`, `(2, "Dos")`, y `(3, "Tres")`.

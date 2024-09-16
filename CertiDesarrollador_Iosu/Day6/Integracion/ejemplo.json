@@ -1,0 +1,69 @@
+{
+    "specversion": "1.0",
+    "type": "Salesforce/Ticket.Updated",
+    "source": "/salesforce/ticket/000000000741207345",
+    "id": "9f41b91b-0687-1edf-9c9d-95b36b7f248c",
+    "event-type": "Ticket.Updated",
+    "event-type-version": "v1",
+    "event-id": "9f41b91b-0687-1edf-9c9d-95b36b7f248c",
+    "event-time": "2024-09-12T09:52:08Z",
+    "event-technical-name": "SERVICE_REQUEST.Updated",
+    "data": {
+      "root-entity-id": "003A84F13AB01EDF9BE8EA149792F49C",
+      "entity-id": "003A84F13AB01EDF9BE8EA149792F49C",
+      "Changes": [
+        {
+          "node": "Ticket",
+          "nodeID": "003A84F13AB01EDF9BE8EA149792F49C",
+          "ParentNodeID": "",
+          "Modification": "Updated",
+          "ChangedBy": "Salesforce_System",
+          "ChangedFields": [
+            {
+              "Fieldname": "LastModifiedDate",
+              "New": "2024-09-12T09:52:08.724Z",
+              "Old": "2024-09-12T09:51:56.170Z"
+            },
+            {
+              "Fieldname": "LastModifiedById",
+              "New": "00563E922B641ED9ABA551F17A37B394",
+              "Old": "00563ECD70101EDC9A9242A3D574EFAC"
+            },
+            {
+              "Fieldname": "Status",
+              "New": "Closed",
+              "Old": "In Progress"
+            },
+            {
+              "Fieldname": "Priority",
+              "New": "High",
+              "Old": "Medium"
+            }
+          ]
+        },
+        {
+          "node": "Task",
+          "nodeID": "003A84F13AB01EDF9BE8ED89E910F49C",
+          "ParentNodeID": "003A84F13AB01EDF9BE8EA149792F49C",
+          "Modification": "Updated",
+          "ChangedBy": "Salesforce_System",
+          "ChangedFields": [
+            {
+              "Fieldname": "Duration",
+              "New": "01:01:00",
+              "Old": "00:47:00"
+            }
+          ]
+        },
+        {
+          "node": "Attachment",
+          "nodeID": "003A84F13AB01EDF9BE8ED89E911149C",
+          "ParentNodeID": "003A84F13AB01EDF9BE8EA149792F49C",
+          "Modification": "Created",
+          "ChangedBy": "Salesforce_System",
+          "ChangedFields": []
+        }
+      ]
+    }
+  }
+  
