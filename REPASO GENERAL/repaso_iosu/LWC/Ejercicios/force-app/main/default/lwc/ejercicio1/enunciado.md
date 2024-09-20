@@ -1,0 +1,2 @@
+Instalación de Salesforce CLI: Instala Salesforce CLI y crea un nuevo proyecto para empezar a trabajar con Lightning Web Components.
+Crear un LWC básico: Crea un componente de LWC que muestre el texto "Hola, Mundo" en una página.
