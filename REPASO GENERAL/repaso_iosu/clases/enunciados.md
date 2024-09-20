@@ -34,22 +34,22 @@
 10. **Clase con Métodos de Conversión de Unidades:**
    - **Enunciado:** Implementa una clase `UnitConverter` con métodos para convertir entre diferentes unidades de medida, como metros a kilómetros, gramos a kilogramos, y litros a mililitros.
 
-10. **Clase para Gestión de Cuentas de Usuario:**
+11. **Clase para Gestión de Cuentas de Usuario:**
     - **Enunciado:** Crea una clase `Account` con propiedades para `AccountName`, `AccountNumber`, y `Balance`. Agrega métodos para `deposit` y `withdraw`, asegurándote de que no se pueda retirar más de lo disponible.
 
-11. **Clase con Funcionalidad de Notificación:**
+12. **Clase con Funcionalidad de Notificación:**
     - **Enunciado:** Desarrolla una clase `Notification` con propiedades `Recipient` y `Message`. Agrega un método `sendNotification` que simule el envío de una notificación (puede ser un simple `System.debug`).
 
-12. **Clase con Cálculo de Descuentos:**
+13. **Clase con Cálculo de Descuentos:**
     - **Enunciado:** Implementa una clase `DiscountCalculator` con métodos para calcular el precio con descuento basándose en el precio original y la tasa de descuento. Implementa también un método `getFinalPrice` que devuelva el precio final después de aplicar el descuento.
 
-13. **Clase con Generación de Reportes:**
+14. **Clase con Generación de Reportes:**
     - **Enunciado:** Crea una clase `ReportGenerator` con métodos para agregar datos a un reporte, como `addData` y `generateReport`. Implementa `generateReport` para devolver una cadena con todos los datos agregados en un formato tabular simple.
 
-14. **Clase con Procesamiento de Datos:**
+15. **Clase con Procesamiento de Datos:**
     - **Enunciado:** Desarrolla una clase `DataProcessor` con métodos para procesar una lista de enteros. Incluye métodos como `getMax`, `getMin`, y `getAverage` que devuelvan el valor máximo, mínimo y el promedio de la lista, respectivamente.
 
-15. **Clase con Manejo de Configuración:**
+16. **Clase con Manejo de Configuración:**
     - **Enunciado:** Implementa una clase `ConfigurationManager` con un método `getConfigValue` que acepte una clave y devuelva el valor correspondiente de un mapa interno que simule la configuración del sistema.
 
 Estos enunciados están diseñados para ayudarte a practicar y fortalecer tus habilidades en Apex, desde conceptos básicos hasta aplicaciones más complejas. ¡Espero que te resulten útiles!

@@ -1,41 +1,61 @@
-// Crea una clase `Account` con propiedades para `AccountName`, `AccountNumber`, y `Balance`.
+// Crea una clase `Bank` con propiedades para `AccountName`, `AccountNumber`, y `Balance`.
 //  Agrega métodos para `deposit` y `withdraw`, asegurándote de que no se pueda retirar más de lo disponible.
 
-public class BankAccount {
-
-    // Propiedades
-    public String AccountName { get; set; }
-    public Integer AccountNumber { get; set; }
-    public Decimal Balance { get; private set; } // El balance solo se puede modificar internamente
-
-    // Constructor
-    public BankAccount(String accountName, Integer accountNumber, Decimal balance) {
-        this.AccountName = accountName;
-        this.AccountNumber = accountNumber;
-        this.Balance = balance;
+public class Bank {
+ 
+    public String BankName { get; set; }
+    public String BankNumber { get; set; }
+    public Decimal Balance { get; set; }
+ 
+    public Bank(String BankName, String BankNumber, Decimal Balance) {
+        this.BankName = BankName;
+        this.BankNumber = BankNumber;
+        this.Balance = Balance;
     }
-
-    // Método para depositar
+ 
     public void deposit(Decimal amount) {
-        if (amount > 0) {
-            Balance += amount;
-            System.debug('Depositado: ' + amount + '. Nuevo Balance: ' + Balance);
-        } else {
-            System.debug('La cantidad a depositar debe ser positiva.');
-        }
+        Balance += amount;
     }
-
-    // Método para retirar
+ 
     public void withdraw(Decimal amount) {
-        if (amount > 0) {
-            if (Balance >= amount) {
-                Balance -= amount;
-                System.debug('Retirado: ' + amount + '. Nuevo Balance: ' + Balance);
-            } else {
-                System.debug('Fondos insuficientes para realizar este retiro.');
-            }
-        } else {
-            System.debug('La cantidad a retirar debe ser positiva.');
-        }
+            Balance -= amount;
     }
 }
+
+
+//SOLUCIÓN AVANZADA.
+
+// public class Bank {
+
+//     public String AccountName { get; set; }
+//     public String AccountNumber { get; set; }
+//     private Decimal Balance { get; set; }
+//     public Decimal Amount { get; set; }
+
+//     public Bank(Decimal initialAmount, String accountName, String accountNumber) {
+//         this.Balance = initialAmount;
+//         this.AccountName = accountName;
+//         this.AccountNumber = accountNumber;
+//     }
+
+
+//     public void deposit(Decimal depositAmount) {
+//         this.Balance += depositAmount;  
+//         System.debug('Deposited: ' + depositAmount + '. New balance: ' + this.Balance + ' euros.');
+//     }
+   
+//     public Decimal withdraw(Decimal withdrawalAmount) {
+//         if (withdrawalAmount > this.Balance) {
+//             System.debug('Insufficient funds. Cannot withdraw ' + withdrawalAmount + ' euros.');
+//             return this.Balance;  
+//         }
+//         this.Balance -= withdrawalAmount;  
+//         System.debug('Withdrawn: ' + withdrawalAmount + '. Remaining balance: ' + this.Balance + ' euros.');
+//         return this.Balance;  
+//     }
+
+//     public Decimal checkBalance() {
+//         System.debug('Current balance: ' + this.Balance + ' euros.');
+//         return this.Balance;
+//     }
+// }

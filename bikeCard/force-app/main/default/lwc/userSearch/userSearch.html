@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-20-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Lista de Usuarios" icon-name="standard:user">
+        <template if:true={paginatedUsers}>
+            <lightning-datatable
+                key-field="id"
+                data={paginatedUsers}
+                columns={columns}
+                hide-checkbox-column="true"
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+            <lightning-button label="Anterior" onclick={handlePreviousPage} ></lightning-button>
+            <lightning-button label="Siguiente" onclick={handleNextPage} ></lightning-button>
+        </template>
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+
+    <c-imputaciones-modal if:true={selectedUser}></c-imputaciones-modal>
+</template>

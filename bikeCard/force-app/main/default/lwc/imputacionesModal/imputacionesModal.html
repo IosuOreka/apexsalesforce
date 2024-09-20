@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-20-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div>
+        <template if:true={userData}>
+            <h2>Datos del Usuario</h2>
+            <p><strong>Nombre:</strong> {userData.name}</p>
+            <p><strong>Username:</strong> {userData.username}</p>
+            <p><strong>Email:</strong> {userData.email}</p>
+            <p><strong>Teléfono:</strong> {userData.tlf}</p>
+
+            <h3>Imputaciones</h3>
+            <template if:true={isLoading}>
+                <p>Cargando imputaciones...</p>
+            </template>
+            <template if:false={isLoading}>
+                <template if:true={imputaciones.length}>
+                    <ul>
+                        <template for:each={imputaciones} for:item="imputacion">
+                            <li key={imputacion.horasImputadas}>Horas imputadas: {imputacion.horasImputadas}</li>
+                            <li key={imputacion.fechaImputacion}>Fecha imputación: {imputacion.fechaImputacion}</li>
+                        </template>
+                    </ul>
+                </template>
+                <template if:false={imputaciones.length}>
+                    <p>No se encontraron imputaciones para este usuario.</p>
+                </template>
+            </template>
+        </template>
+        <template if:false={userData}>
+            <p>Error: No se pudieron cargar los datos del usuario.</p>
+        </template>
+    </div>
+</template>

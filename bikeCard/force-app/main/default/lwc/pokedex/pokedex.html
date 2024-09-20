@@ -1,0 +1,44 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 09-19-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Pokedex">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Buscar Pokémon" value={searchTerm} onchange={handleSearch}></lightning-input>
+            <lightning-datatable
+                key-field="id"
+                data={pokemons}
+                columns={columns}
+                onrowaction={handleRowAction}
+                class="slds-m-top_medium">
+            </lightning-datatable>
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    variant="neutral"
+                    label="Previous"
+                    onclick={handlePreviousPage}
+                    disabled={isPreviousDisabled}>
+                </lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    label="Next"
+                    onclick={handleNextPage}
+                    disabled={isNextDisabled}>
+                </lightning-button>
+            </div>
+            <template if:true={selectedPokemon}>
+                <lightning-card title={selectedPokemon.name} class="slds-m-top_medium">
+                    <img src={selectedPokemon.image} alt={selectedPokemon.name} />
+                    <p>Height: {selectedPokemon.height} meters</p>
+                    <p>Weight: {selectedPokemon.weight} kg</p>
+                    <p>Abilities: {formattedAbilities}</p>
+                    <p>Types: {formattedTypes}</p>
+                </lightning-card>
+            </template>
+        </div>
+    </lightning-card>
+</template>
