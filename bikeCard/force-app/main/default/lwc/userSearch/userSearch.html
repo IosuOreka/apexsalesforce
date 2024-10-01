@@ -2,26 +2,180 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 09-20-2024
+  @last modified on  : 09-27-2024
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
-    <lightning-card title="Lista de Usuarios" icon-name="standard:user">
-        <template if:true={paginatedUsers}>
-            <lightning-datatable
-                key-field="id"
-                data={paginatedUsers}
-                columns={columns}
-                hide-checkbox-column="true"
-                onrowaction={handleRowAction}>
-            </lightning-datatable>
-            <lightning-button label="Anterior" onclick={handlePreviousPage} ></lightning-button>
-            <lightning-button label="Siguiente" onclick={handleNextPage} ></lightning-button>
-        </template>
-        <template if:true={error}>
-            <p class="slds-text-color_error">{error}</p>
-        </template>
-    </lightning-card>
+    <!-- Card para el login -->
+    <lightning-card>
+        <div class="slds-grid slds-wrap slds-p-around_medium slds-align_absolute-center">
+            <!-- Título centrado en mayúsculas -->
+            <h1 class="slds-text-heading_large slds-text-align_center slds-text-transform_uppercase">
+                CONTROL HORARIO - ACCESO
+            </h1>
+        </div>
 
+        <div class="slds-p-around_medium">
+            <!-- Mensaje de instrucciones -->
+            <p class="slds-text-heading_small slds-m-bottom_medium">
+                Introducir usuario y contraseña para control horario para obtener datos de la aplicación:
+            </p>
+
+            <!-- Input para el username -->
+            <lightning-input 
+                label="Usuario" 
+                value={username} 
+                placeholder="Ingrese su usuario" 
+                onchange={handleUsernameChange} 
+                class="slds-m-bottom_small">
+            </lightning-input>
+
+            <!-- Input para el password -->
+            <lightning-input 
+                label="Contraseña" 
+                type="password" 
+                value={password} 
+                placeholder="Ingrese su contraseña" 
+                onchange={handlePasswordChange} 
+                class="slds-m-bottom_medium">
+            </lightning-input>
+
+            <!-- Botón para obtener usuarios -->
+            <lightning-button 
+                label="Login" 
+                variant="brand" 
+                onclick={handleLogin}>
+            </lightning-button>
+            <template if:true={error}>
+                <p class="slds-text-color_error slds-m-top_medium">{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+    <div class="slds-m-top_large">
+        <lightning-card>
+            <div class="slds-grid slds-wrap slds-align_absolute-center">
+                <h1 class="slds-text-heading_large slds-text-align_center slds-text-transform_uppercase" style="margin-bottom: 15px">
+                    CONTROL HORARIO - IMPUTACIONES Y USUARIOSSS
+                </h1>
+            </div>
+            <template if:true={paginatedUsers.length}>
+                <div class="slds-p-around_medium slds-text-align_center">
+                    <h4 style="font-size: large; font-weight:bold">PANEL DE CONTROL DE LAS IMPORTACIONES</h4>
+                    <div style="display: flex; flex-direction:column; width: 40%; margin: 0 auto; margin-top: 15px; padding: 15px; border: 2px solid rgb(94, 94, 197); border-radius: 5px">
+                        <h6 style="margin-top: 10px; font-size:medium; text-decoration:underline; margin-bottom: 15px">GESTIÓN DE PROYECTOS</h6> 
+                        <div style="display: flex; gap: 15px; justify-content: center">
+                            <lightning-button  
+                                label="Importar Proyectos" 
+                                variant="brand"  
+                                style="
+                                width: 350px;
+                                border-radius: 10px; 
+                                border: none; 
+                                padding: 10px 20px; 
+                                box-shadow: 
+                                    5px 5px 15px rgba(60, 66, 132, 0.2) , 
+                                    -5px -5px 15px rgba(134, 126, 235, 0.7) !important; 
+                                width: 10%; 
+                                transition: all 0.3s ease;"
+                                icon-name="utility:save" 
+                                icon-position="left" 
+                                onclick={getAllProyectos}>
+                            </lightning-button>
+                        
+                            <lightning-button 
+                                label="Borrar todos los proyectos" 
+                                variant="brand" 
+                                icon-name="utility:delete" 
+                                style="
+                                width: 350px;
+                                border-radius: 10px; 
+                                border: none; 
+                                padding: 10px 20px; 
+                                box-shadow: 
+                                    5px 5px 15px rgba(60, 66, 132, 0.2) , 
+                                    -5px -5px 15px rgba(134, 126, 235, 0.7) !important; 
+                                width: 10%; 
+                                transition: all 0.3s ease;"
+                                icon-position="left" 
+                                onclick={borrarProyectosSalesforce}>
+                            </lightning-button>
+                        </div>
+                        <h6 style="margin-top: 10px; font-size:medium; text-decoration:underline; margin-bottom: 15px">GESTIÓN DE IMPUTACIONES</h6> 
+                        <div style="display: flex; gap: 15px; justify-content: center; margin-top: 25px">
+                            <lightning-button  
+                                label="Importar Imputaciones" 
+                                variant="brand"  
+                                icon-name="utility:save" 
+                                style="
+                                width: 350px;
+                                border-radius: 10px; 
+                                border: none; 
+                                padding: 10px 20px; 
+                                box-shadow: 
+                                    5px 5px 15px rgba(60, 66, 132, 0.2) , 
+                                    -5px -5px 15px rgba(134, 126, 235, 0.7) !important; 
+                                width: 10%; 
+                                transition: all 0.3s ease;"
+                                icon-position="left" 
+                                onclick={getAllImputaciones}>
+                            </lightning-button>
+                        
+                            <lightning-button 
+                                label="Borrar todas las imputaciones" 
+                                variant="brand" 
+                                icon-name="utility:delete" 
+                                style="
+                                width: 350px;
+                                border-radius: 10px; 
+                                border: none; 
+                                padding: 10px 20px; 
+                                box-shadow: 
+                                    5px 5px 15px rgba(60, 66, 132, 0.2) , 
+                                    -5px -5px 15px rgba(134, 126, 235, 0.7) !important; 
+                                width: 10%; 
+                                transition: all 0.3s ease;"
+                                icon-position="left" 
+                                onclick={borrarImputacionesSalesforce}>
+                            </lightning-button>
+                        </div>
+                        </div>
+                   
+                    
+                </div>
+                <div style="margin: 0 50px;">
+                    <lightning-datatable
+                        key-field="id"
+                        data={paginatedUsers}
+                        columns={columns}
+                        hide-checkbox-column="true"
+                        onrowaction={handleRowAction}
+                        class="my-custom-datatable">
+                    </lightning-datatable>
+                </div>
+
+                <div class="slds-m-top_small slds-text-align_center">
+                    <lightning-button 
+                        label="Anterior" 
+                        onclick={handlePreviousPage} 
+                        icon-name="utility:chevronleft"
+                        icon-position="left" 
+                        class="slds-m-right_small my-custom-button">
+                    </lightning-button>
+                    <lightning-button 
+                        label="Siguiente" 
+                        onclick={handleNextPage} 
+                        icon-name="utility:chevronright"
+                        icon-position="right" 
+                        class="my-custom-button">
+                    </lightning-button>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error slds-m-top_medium">{error}</p>
+            </template>
+        </lightning-card>
+    </div>
     <c-imputaciones-modal if:true={selectedUser}></c-imputaciones-modal>
 </template>
+

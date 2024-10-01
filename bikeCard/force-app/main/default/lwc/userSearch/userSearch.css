@@ -1,0 +1,32 @@
+.my-custom-datatable .slds-datatable {
+    border: 1px solid #e1e1e1; /* Borde de la tabla */
+    border-radius: 0.25rem; /* Esquinas redondeadas */
+}
+
+.my-custom-datatable .slds-datatable th {
+    background-color: #f3f3f3; /* Color de fondo para el encabezado */
+    color: #333; /* Color del texto del encabezado */
+}
+
+.my-custom-datatable .slds-datatable tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo para filas impares */
+}
+
+.my-custom-datatable .slds-datatable tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Color de fondo para filas pares */
+}
+
+.my-custom-datatable .slds-datatable tbody tr:hover {
+    background-color: #f0f8ff; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos personalizados para los botones */
+.my-custom-button {
+    background-color: #f4f6f9; /* Color de fondo por defecto */
+    color: #0070d2; /* Color del texto */
+}
+
+.my-custom-button:hover {
+    background-color: #0070d2 !important; /* Color de fondo al hacer hover */
+    color: white !important; /* Color del texto al hacer hover */
+}

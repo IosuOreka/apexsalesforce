@@ -2,38 +2,63 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 09-20-2024
+  @last modified on  : 09-25-2024
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
-    <div>
-        <template if:true={userData}>
-            <h2>Datos del Usuario</h2>
-            <p><strong>Nombre:</strong> {userData.name}</p>
-            <p><strong>Username:</strong> {userData.username}</p>
-            <p><strong>Email:</strong> {userData.email}</p>
-            <p><strong>Teléfono:</strong> {userData.tlf}</p>
+    <template if:true={isModalVisible}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
 
-            <h3>Imputaciones</h3>
-            <template if:true={isLoading}>
-                <p>Cargando imputaciones...</p>
-            </template>
-            <template if:false={isLoading}>
-                <template if:true={imputaciones.length}>
-                    <ul>
-                        <template for:each={imputaciones} for:item="imputacion">
-                            <li key={imputacion.horasImputadas}>Horas imputadas: {imputacion.horasImputadas}</li>
-                            <li key={imputacion.fechaImputacion}>Fecha imputación: {imputacion.fechaImputacion}</li>
+                <!-- Encabezado del Modal -->
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={hideModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium">Imputaciones de {userData.name}</h2>
+                </div>
+
+                <!-- Cuerpo del Modal -->
+                <div class="slds-modal__content slds-p-around_medium">
+                    <template if:true={userData}>
+                        <h2>Datos del Usuario</h2>
+                        <p><strong>Nombre:</strong> {userData.name}</p>
+                        <p><strong>Username:</strong> {userData.username}</p>
+                        <p><strong>Email:</strong> {userData.email}</p>
+                        <p><strong>Teléfono:</strong> {userData.tlf}</p>
+
+                        <h3>Imputaciones</h3>
+                        <template if:true={isLoading}>
+                            <p>Cargando imputaciones...</p>
                         </template>
-                    </ul>
-                </template>
-                <template if:false={imputaciones.length}>
-                    <p>No se encontraron imputaciones para este usuario.</p>
-                </template>
-            </template>
-        </template>
-        <template if:false={userData}>
-            <p>Error: No se pudieron cargar los datos del usuario.</p>
-        </template>
-    </div>
+                        <template if:false={isLoading}>
+                            <template if:true={imputaciones.length}>
+                                <ul>
+                                    <template for:each={imputaciones} for:item="imputacion">
+                                        <li key={imputacion.horasImputadas}>Horas imputadas: {imputacion.horasImputadas}</li>
+                                        <li key={imputacion.fechaImputacion}>Fecha imputación: {imputacion.fechaImputacion}</li>
+                                    </template>
+                                </ul>
+                            </template>
+                            <template if:false={imputaciones.length}>
+                                <p>No se encontraron imputaciones para este usuario.</p>
+                            </template>
+                        </template>
+                    </template>
+                    <template if:false={userData}>
+                        <p>Error: No se pudieron cargar los datos del usuario.</p>
+                    </template>
+                </div>
+
+                <!-- Pie del Modal -->
+                <div class="slds-modal__footer">
+                    <lightning-button label="Cerrar" variant="neutral" onclick={hideModal}></lightning-button>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
 </template>
+

@@ -12,7 +12,7 @@ Aquí tienes una lista de **100 enunciados de ejercicios** de **Lightning Web Co
 6. **Data Binding**: Crea un campo de entrada donde el texto escrito se refleje en tiempo real en un elemento de salida (two-way data binding).
 7. **Props vs State**: Crea dos componentes: uno que envíe un valor como propiedad y otro que lo reciba y lo muestre.
 8. **Eventos Básicos**: Añade un evento `click` a un botón y usa una función de JavaScript para manejar el evento.
-9. **Llamar a funciones de JavaScript**: Define una función de JavaScript y llama a esa función cuando ocurra un evento en el componente.
+9. **Llamar a funciones de JavaScript**: Define una función de JavaScript y llama a esa función cuando ocurra un evento en el componente. Sugerencia: Intentar hacer un componente que oculte o muestre una imagen.
 10. **Condicionales en el HTML**: Usa `if:true` y `if:false` para mostrar o ocultar contenido en el HTML.
 11. **Listas Dinámicas**: Renderiza una lista de elementos utilizando un array en JavaScript y el template for:each.
 12. **Crear un Formulario Simple**: Crea un formulario con campos de entrada (nombre, email) y muestra los valores en tiempo real.

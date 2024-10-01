@@ -1,43 +1,86 @@
 import { LightningElement, api } from 'lwc';
 
 export default class ImputacionesModal extends LightningElement {
-    userData;  // Variable para almacenar los datos del usuario
-    imputaciones = [];  // Lista de imputaciones que se mostrarán en el modal
-    isLoading = false;  // Indicador de carga de imputaciones
-    isModalVisible = false;  // Indicador para mostrar/ocultar el modal
+    userData;  
+    imputaciones = [];  
+    isLoading = false;  
+    isModalVisible = false;  
+    accessToken = null;
+    username = sessionStorage.getItem('nombre');
+    password = sessionStorage.getItem('password');
+
 
     @api showModal(userData) {
-        this.userData = userData;  // Asigna los datos del usuario seleccionado
-        this.getImputaciones();    // Llama a la función para obtener las imputaciones del usuario
-        this.isModalVisible = true;  // Muestra el modal
+        this.userData = userData;  
+        this.getTokenAndFetchImputaciones(); 
+        this.isModalVisible = true;  
     }
 
     hideModal() {
-        this.isModalVisible = false;  // Oculta el modal
+        this.isModalVisible = false;  
     }
 
-    // Función para obtener las imputaciones del usuario seleccionado
+    // Función para obtener el token y luego las imputaciones
+    getTokenAndFetchImputaciones() {
+        this.loginAndFetchImputaciones();  
+    }
+
+    // Función para iniciar sesión y obtener el accessToken
+    loginAndFetchImputaciones() {
+      
+        console.log("username: ", this.username);
+        console.log("password: ", this.password);
+        const url = 'https://192.168.7.32:3000/user/login';
+        const body = JSON.stringify({
+            user: this.username,
+            password: this.password
+        });
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: body
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Data del loggin: ", data)
+            if (data.status === 200) {
+                this.accessToken = data.accessToken;  
+                this.getImputaciones();  
+            } else {
+                console.error('Error al iniciar sesión: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error al iniciar sesión: ' + error);
+        });
+    }
+
+   
     getImputaciones() {
-        this.isLoading = true;  // Activa el indicador de carga
-        const url = 'https://192.168.7.32:3000/imputaciones/getAllImputacionesByUserSalesfore ';
+        this.isLoading = true;  
+
+        const url = 'https://192.168.7.32:3000/imputaciones/getAllImputacionesByUserSalesforce';
 
         // Realiza la solicitud POST con el username
         fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `${this.accessToken}`  
             },
-            // Aquí enviamos el body exactamente como lo necesita el backend: { body: { username: 'valor' } }
-            body: JSON.stringify({ username: this.userData.username })
+            body: JSON.stringify({ "username": this.userData.username })  
         })
-        .then(response => response.json())  // Procesa la respuesta JSON
+        .then(response => response.json())  
         .then(data => {
-            this.imputaciones = data;  // Almacena las imputaciones en la variable
-            this.isLoading = false;    // Desactiva el indicador de carga
+            this.imputaciones = data;  
+            this.isLoading = false;    
         })
         .catch(error => {
             console.error('Error fetching imputaciones:', error);
-            this.isLoading = false;  // Desactiva el indicador de carga en caso de error
+            this.isLoading = false;  
         });
     }
 }
