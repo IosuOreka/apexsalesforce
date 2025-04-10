@@ -5,3 +5,7 @@ public class obtenerCuentas{
         return [SELECT Name FROM Account]
     }
 }
+
+<apex:page>
+    
+</apex:page>

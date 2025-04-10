@@ -1,0 +1,7 @@
+<template>
+    <h1>Componente Hijo:</h1>
+    <button onclick={handleClick}>{buttonText}</button>
+    <template if:false={mensajeOculto}>
+    <p>{mensaje}</p>
+    </template>
+</template>
